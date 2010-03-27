@@ -103,25 +103,9 @@ class DataAccessObject {
     $structure = $this->DbConnection->getAllRows("DESCRIBE $this->table_name;");
     return $structure;
   }
-  
-  
-  /**
-   * By default the id field is simply {table-name}_id, you can override it here
-   * @param string $field
-   * @return NULL
-   */
-  public function setIdField($field)
-  {
-    $this->id_field = $field;
-  }
-  
+    
   public function getId(){
     return $this->id;
-  }
-  
-  public function getIdField()
-  {
-   return $this->id_field;
   }
   
   /**
@@ -193,7 +177,7 @@ class DataAccessObject {
    * Asserts that the DataAccessObject is Loaded
    * @return boolean
    */
-  public function assertLoaded()
+  protected function assertLoaded()
   {
     if ( !$this->isLoaded() ) {
       throw new RunTimeException($this->assert_message);
