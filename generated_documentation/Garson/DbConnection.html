@@ -1,0 +1,506 @@
+<html>
+<head>
+<title>Docs For Class DbConnection</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">Garson</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                              		  [ <a href="../classtrees_Garson.html" class="menu">class tree: Garson</a> ]
+		  [ <a href="../elementindex_Garson.html" class="menu">index: Garson</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+	<div id="ric">
+					<p><a href="../ric_README.html">README</a></p>
+			</div>
+      <b>Packages:</b><br />
+              <a href="../li_Garson.html">Garson</a><br />
+            <br /><br />
+                        <b>Files:</b><br />
+      	  <div class="package">
+			<a href="../Garson/_application---models---Config.inc.php.html">		Config.inc.php
+		</a><br>
+			<a href="../Garson/_application---models---DataAccessObject.inc.php.html">		DataAccessObject.inc.php
+		</a><br>
+			<a href="../Garson/_application---models---DbConnection.php.html">		DbConnection.php
+		</a><br>
+	  </div><br />
+      
+      
+            <b>Classes:</b><br />
+        <div class="package">
+		    		<a href="../Garson/Config.html">Config</a><br />
+	    		<a href="../Garson/DataAccessObject.html">DataAccessObject</a><br />
+	    		<a href="../Garson/DbConnection.html">DbConnection</a><br />
+	  </div>
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Class: DbConnection</h1>
+Source Location: /application/models/DbConnection.php<br /><br />
+
+
+<table width="100%" border="0">
+<tr><td valign="top">
+
+<h3><a href="#class_details">Class Overview</a></h3>
+<pre></pre><br />
+<div class="description">Database Connection abstraction</div><br /><br />
+
+
+
+
+
+
+        
+</td>
+
+<td valign="top">
+<h3><a href="#class_vars">Variables</a></h3>
+<ul>
+    <li><a href="../Garson/DbConnection.html#var$db_connection">$db_connection</a></li>
+    <li><a href="../Garson/DbConnection.html#var$errors">$errors</a></li>
+    <li><a href="../Garson/DbConnection.html#var$__instance">$__instance</a></li>
+  </ul>
+</td>
+
+
+<td valign="top">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../Garson/DbConnection.html#method__construct">__construct</a></li>
+    <li><a href="../Garson/DbConnection.html#methodexecuteQuery">executeQuery</a></li>
+    <li><a href="../Garson/DbConnection.html#methodgetAllRows">getAllRows</a></li>
+    <li><a href="../Garson/DbConnection.html#methodgetArrayPair">getArrayPair</a></li>
+    <li><a href="../Garson/DbConnection.html#methodgetInstance">getInstance</a></li>
+    <li><a href="../Garson/DbConnection.html#methodgetLastId">getLastId</a></li>
+    <li><a href="../Garson/DbConnection.html#methodgetOneColumn">getOneColumn</a></li>
+    <li><a href="../Garson/DbConnection.html#methodgetOneRow">getOneRow</a></li>
+    <li><a href="../Garson/DbConnection.html#methodgetOneValue">getOneValue</a></li>
+  </ul>
+</td>
+
+</tr></table>
+<hr />
+
+<table width="100%" border="0"><tr>
+
+
+
+
+
+
+</tr></table>
+<hr />
+
+<a name="class_details"></a>
+<h3>Class Details</h3>
+<div class="tags">
+[line <a href="../__filesource/fsource_Garson__applicationmodelsDbConnection.php.html#a17">17</a>]<br />
+Database Connection abstraction<br /><br /><p>Provides extremely useful functions for data retrieval, and other database  affairs.</p><br /></div><br /><br />
+<div class="top">[ <a href="#top">Top</a> ]</div><br />
+
+<hr />
+<a name="class_vars"></a>
+<h3>Class Variables</h3>
+<div class="tags">
+	<a name="var$__instance"></a>
+	<p></p>
+	<h4>static $__instance = <span class="value">&nbsp;null</span></h4>
+	<p>[line <a href="../__filesource/fsource_Garson__applicationmodelsDbConnection.php.html#a23">23</a>]</p>
+  Holds the instance of the singleton<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td><a href="../Garson/DbConnection.html">DbConnection</a></td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$db_connection"></a>
+	<p></p>
+	<h4>$db_connection = <span class="value">&nbsp;null</span></h4>
+	<p>[line <a href="../__filesource/fsource_Garson__applicationmodelsDbConnection.php.html#a28">28</a>]</p>
+  Holds the MySQL Link to the Database<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>resource</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$errors"></a>
+	<p></p>
+	<h4>$errors = <span class="value">array()</span></h4>
+	<p>[line <a href="../__filesource/fsource_Garson__applicationmodelsDbConnection.php.html#a33">33</a>]</p>
+  An array with all the errors<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+</div><br />
+
+<hr />
+<a name="class_methods"></a>
+<h3>Class Methods</h3>
+<div class="tags">
+  <hr />
+	<a name="methodgetInstance"></a>
+	<h3>static method getInstance <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsDbConnection.php.html#a50">50</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static <a href="../Garson/DbConnection.html">DbConnection</a> getInstance(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get a single instance of the class (Singleton)<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+
+  <hr />
+	<a name="method__construct"></a>
+	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsDbConnection.php.html#a35">35</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>DbConnection __construct(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodexecuteQuery"></a>
+	<h3>method executeQuery <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsDbConnection.php.html#a177">177</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean executeQuery(
+string
+$sql)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Executes a query directly<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$sql</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetAllRows"></a>
+	<h3>method getAllRows <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsDbConnection.php.html#a67">67</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getAllRows(
+string
+$sql)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Gets an Multidimensional associative array, with all the results:<br /><br /><p>Array(   1=&gt; array( id=1, nick=levhita, name=argel, lastname=arias)   2=&gt; array( id=32, nick=renich, name=renich, lastname=bon)   3=&gt; array( id=5, nick=b3t0, name=b3, lastname=t0)   )</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$sql</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetArrayPair"></a>
+	<h3>method getArrayPair <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsDbConnection.php.html#a117">117</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getArrayPair(
+string
+$sql)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Gets an array as a key =&gt; value pair:<br /><br /><p>Array (    1=levhita    32=renich    5=b3t0  )</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$sql</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetLastId"></a>
+	<h3>method getLastId <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsDbConnection.php.html#a189">189</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>integer getLastId(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Used when you need to know the id of the row that you just inserted<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetOneColumn"></a>
+	<h3>method getOneColumn <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsDbConnection.php.html#a92">92</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>unknown_type getOneColumn(
+string
+$sql)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Gets one array with the results in one column:<br /><br /><p>Array (    1=levhita    2=renich    3=b3t0  )</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$sql</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetOneRow"></a>
+	<h3>method getOneRow <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsDbConnection.php.html#a143">143</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getOneRow(
+string
+$sql)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Gets only the first Row as an associative array:<br /><br /><p>Array (    id=1    nick=levhita    name=argel    lastname=arias  )</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$sql</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetOneValue"></a>
+	<h3>method getOneValue <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsDbConnection.php.html#a160">160</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getOneValue(
+string
+$sql)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Gets only the first value of the first row<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$sql</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+</div><br />
+
+
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Sat, 27 Mar 2010 16:24:18 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
