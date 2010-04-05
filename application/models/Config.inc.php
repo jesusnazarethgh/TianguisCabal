@@ -11,9 +11,8 @@
  * 
  */
 class Config {
-  
-  protected static $_instance = NULL;
-  
+
+  protected static $_instances = array();
   protected $config = array();
   protected $filename = '';
     
@@ -21,8 +20,8 @@ class Config {
    * Constructor is private so it can't be instantiated
    * @return Config
    */
-  protected function __construct($filename=''){
-    $this->filename = (empty($filename))? TO_ROOT . "/application/config.ini" : $filename;
+  protected function __construct($filename){
+    $this->filename = $filename;
     if ( !file_exists($this->filename) ) {
       throw new RuntimeException("Couldn't load configuration file: " . $this->filename);
     }
@@ -39,10 +38,12 @@ class Config {
    */
   public static function getInstance($filename = '')
   {
-    if ( !self::$_instance instanceof self ) {
-      self::$_instance = new self($filename);
+    $filename = (empty($filename))? TO_ROOT . "/application/config.ini" : $filename;
+    
+    if ( !(self::$_instances[$filename] instanceof self)) {
+      self::$_instances[$filename] = new self($filename);
     }
-    return self::$_instance;
+    return self::$_instances[$filename];
   }
   
   /**
@@ -55,7 +56,7 @@ class Config {
    */
   public function save($filename = '')
   {
-    $this->filename = (empty($filename)) ? TO_ROOT . " /application/config.ini" : $filename;
+    $this->filename = (empty($filename)) ? TO_ROOT . "/application/config.ini" : $filename;
     if ( !file_exists($this->filename) ) {
       throw new RuntimeException("Configuration file doesn't exist: " . $this->filename);
     }
@@ -95,5 +96,9 @@ class Config {
    */
   public function __set($field, $value) {
     $this->config[$field] = $value;
+  }
+  
+  public function getFilename(){
+    return $this->filename;
   }
 }

@@ -37,7 +37,20 @@ class ConfigTest extends PHPUnit_Framework_TestCase
       $this->assertEquals('writed_value2', $config_array['field2']);
       $this->assertEquals('writed_value3', $config_array['field3']);
       
-      //Empties file for futher tests
+      //Empties file for further tests
       file_put_contents('alternate_config.ini', '');
+    }
+    
+    public function testDefaultFilename()
+    {
+      $default_filename = TO_ROOT . "/application/config.ini";
+      
+      $this->assertFileExists($default_filename,
+      'You must have an application config.ini to run this test');
+      
+      $Config = Config::getInstance();
+      $this->assertNotNull($Config);
+      
+      $this->assertEquals($default_filename, $Config->getFilename());
     }
 }
