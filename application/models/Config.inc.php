@@ -11,16 +11,69 @@
  * 
  */
 class Config {
-  protected static $config = array();
-  protected static $loaded = false;
-  protected static $filename = "";
   
+  protected static $_instance = NULL;
+  
+  protected $config = array();
+  protected $filename = '';
+    
   /**
    * Constructor is private so it can't be instantiated
-   * @return void
+   * @return Config
    */
-  private function __construct()
+  protected function __construct($filename=''){
+    $this->filename = (empty($filename))? TO_ROOT . "/application/config.ini" : $filename;
+    if ( !file_exists($this->filename) ) {
+      throw new RuntimeException("Couldn't load configuration file: " . $this->filename);
+    }
+    $this->config = parse_ini_file($this->filename);
+  }
+  
+  /**
+   * Loads the config from an ini file into an array
+   * 
+   * To override the default just call Config::load('filename') with your custom
+   * config.
+   * @param string $filename
+   * @return Config
+   */
+  public static function getInstance($filename = '')
   {
+    if ( !self::$_instance instanceof self ) {
+      self::$_instance = new self($filename);
+    }
+    return self::$_instance;
+  }
+  
+  /**
+   * Saves the config from the array file into an inifile
+   * 
+   * To override the default just call Config::save('filename') with your custom
+   * config.
+   * @param string $filename
+   * @return boolean
+   */
+  public function save($filename = '')
+  {
+    $this->filename = (empty($filename)) ? TO_ROOT . " /application/config.ini" : $filename;
+    if ( !file_exists($this->filename) ) {
+      throw new RuntimeException("Configuration file doesn't exist: " . $this->filename);
+    }
+    
+    $config_string = '';
+    foreach ($this->config AS $field => $value) {
+      /**
+       * @todo There are some characters that are forbidden as keys
+       * and values, they must raise an exception
+       * source: http://php.net/manual/en/function.parse-ini-file.php
+       */
+      $config_string .= "$field=\"$value\"\n";
+    }
+    
+    if ( file_put_contents($this->filename, $config_string)==false) {
+      throw new RunTimeException("Couldn't save configuration file: ". $this->filename);
+    }
+    return true;
   }
   
   /**
@@ -30,62 +83,17 @@ class Config {
    * @param string $field
    * @return string
    */
-  public static function getConfig($field)
-  {
-    if ( !self::$loaded ){
-      self::load();
-      return self::$config[$field];
-    } 
+  public function __get($field) {
+    return $this->config[$field];
   }
   
   /**
    * Set a single config value
    * @param $field
    * @param $value
-   * @return unknown_type
+   * @return void
    */
-  public static function setConfig($field, $value){
-    return self::$config[$field]=$value;
-  }
-  
-  /**
-   * Loads the config from an ini file into an array
-   * 
-   * To override the default just call Config::load('filename') with your custom
-   * config.
-   * @param string $filename
-   * @return NULL
-   */
-  public static function load($filename = '')
-  {
-    self::$filename = (empty($filename)) ? TO_ROOT . " /application/config.ini" : $filename;
-    if ( !file_exists(self::$filename) ) {
-      throw new RuntimeException("Couldn't load configuration file: " . self::$filename);
-    }
-    self::$config = parse_ini_file(self::$filename);  
-  }
-  
-  /**
-   * Saves the config from the array file into an inifile
-   * 
-   * To override the default just call Config::save('filename') with your custom
-   * config.
-   * @param string $filename
-   * @return NULL
-   */
-  public static function save($filename = '')
-  {
-    $filename = (empty($filename)) ? TO_ROOT . " /application/config.ini" : $filename;
-    if ( !file_exists(self::$filename) ) {
-      throw new RuntimeException("Configuration file doesn't exist: " . $filename);
-    }
-    $config_string = '';
-    foreach (self::$config AS $field => $value) {
-      $config_string .= "$field=$value\n";
-    }
-    
-    if ( file_put_contents($file_name, $config_string)==false) {
-      throw new RunTimeException("Couldn't save configuration file: ". $filename);
-    }  
+  public function __set($field, $value) {
+    $this->config[$field] = $value;
   }
 }
