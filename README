@@ -2,7 +2,8 @@ TianguisCabal - http://linuxcabal.org/
 
 Esta applicación es un intento de aprender OOP en el grupo de PHPCabal.
 
-La aplicación está implementada, actualmente, en la página oficial de LinuxCabal; en programación procedural. Estamos intentando re-escribirlo usando OOP y aprendiendo varios paradigmas importantes en el proceso.
+La aplicación está implementada, actualmente, en la página oficial de LinuxCabal; en programación procedural. 
+Estamos intentando re-escribirlo usando OOP y aprendiendo varios paradigmas importantes en el proceso.
 
 Para más info, visita la página de LinuxCabal: http://linuxcabal.org/
 o, también, nuestro grupo de correo: http://groups.google.com/group/PHPCabal
