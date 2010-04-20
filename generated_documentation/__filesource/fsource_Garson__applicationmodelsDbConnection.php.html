@@ -14,7 +14,7 @@
     <td class="header_menu">
         
                                                         
-                              		  [ <a href="../classtrees_Garson.html" class="menu">class tree: Garson</a> ]
+                                                  		  [ <a href="../classtrees_Garson.html" class="menu">class tree: Garson</a> ]
 		  [ <a href="../elementindex_Garson.html" class="menu">index: Garson</a> ]
 		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
     </td>
@@ -31,6 +31,7 @@
       <b>Packages:</b><br />
               <a href="../li_TianguisCabal.html">TianguisCabal</a><br />
               <a href="../li_Garson.html">Garson</a><br />
+              <a href="../li_GarsonTests.html">GarsonTests</a><br />
             <br /><br />
                   
       
@@ -78,10 +79,10 @@
 <li><div class="src-line"><a name="a35"></a>&nbsp;&nbsp;<span class="src-key">protected&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../Garson/DbConnection.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
 <li><div class="src-line"><a name="a36"></a>&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
 <li><div class="src-line"><a name="a37"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-inc">require_once&nbsp;</span><span class="src-str">&quot;application/models/Config.inc.php&quot;</span><span class="src-sym">;</span></div></li>
-<li><div class="src-line"><a name="a38"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span><span class="src-sym">!</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Garson/DbConnection.html#var$db_connection">db_connection</a>&nbsp;=&nbsp;<span class="src-sym">@</span><a href="http://www.php.net/mysql_connect">mysql_connect</a><span class="src-sym">(</span><span class="src-id"><a href="../Garson/Config.html">Config</a></span><span class="src-sym">::</span><a href="../Garson/Config.html#methodgetConfig">getConfig</a><span class="src-sym">(</span><span class="src-str">'db_host'</span><span class="src-sym">)</span><span class="src-sym">,&nbsp;</span><span class="src-id"><a href="../Garson/Config.html">Config</a></span><span class="src-sym">::</span><a href="../Garson/Config.html#methodgetConfig">getConfig</a><span class="src-sym">(</span><span class="src-str">'db_user'</span><span class="src-sym">)</span><span class="src-sym">,&nbsp;</span><span class="src-id"><a href="../Garson/Config.html">Config</a></span><span class="src-sym">::</span><a href="../Garson/Config.html#methodgetConfig">getConfig</a><span class="src-sym">(</span><span class="src-str">'db_password'</span><span class="src-sym">))&nbsp;)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a38"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span><span class="src-sym">!</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Garson/DbConnection.html#var$db_connection">db_connection</a>&nbsp;=&nbsp;<span class="src-sym">@</span><a href="http://www.php.net/mysql_connect">mysql_connect</a><span class="src-sym">(</span><span class="src-id"><a href="../Garson/Config.html">Config</a></span><span class="src-sym">::</span><span class="src-id">getConfig</span><span class="src-sym">(</span><span class="src-str">'db_host'</span><span class="src-sym">)</span><span class="src-sym">,&nbsp;</span><span class="src-id"><a href="../Garson/Config.html">Config</a></span><span class="src-sym">::</span><span class="src-id">getConfig</span><span class="src-sym">(</span><span class="src-str">'db_user'</span><span class="src-sym">)</span><span class="src-sym">,&nbsp;</span><span class="src-id"><a href="../Garson/Config.html">Config</a></span><span class="src-sym">::</span><span class="src-id">getConfig</span><span class="src-sym">(</span><span class="src-str">'db_password'</span><span class="src-sym">))&nbsp;)&nbsp;</span><span class="src-sym">{</span></div></li>
 <li><div class="src-line"><a name="a39"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id">RunTimeException</span><span class="src-sym">(</span><span class="src-str">&quot;Couldn't&nbsp;connect&nbsp;to&nbsp;the&nbsp;database&nbsp;server&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a40"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
-<li><div class="src-line"><a name="a41"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span><span class="src-sym">!</span><span class="src-sym">@</span><a href="http://www.php.net/mysql_select_db">mysql_select_db</a><span class="src-sym">(</span><span class="src-id"><a href="../Garson/Config.html">Config</a></span><span class="src-sym">::</span><a href="../Garson/Config.html#methodgetConfig">getConfig</a><span class="src-sym">(</span><span class="src-str">'db_name'</span><span class="src-sym">)</span><span class="src-sym">,&nbsp;</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Garson/DbConnection.html#var$db_connection">db_connection</a><span class="src-sym">)&nbsp;)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a41"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span><span class="src-sym">!</span><span class="src-sym">@</span><a href="http://www.php.net/mysql_select_db">mysql_select_db</a><span class="src-sym">(</span><span class="src-id"><a href="../Garson/Config.html">Config</a></span><span class="src-sym">::</span><span class="src-id">getConfig</span><span class="src-sym">(</span><span class="src-str">'db_name'</span><span class="src-sym">)</span><span class="src-sym">,&nbsp;</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Garson/DbConnection.html#var$db_connection">db_connection</a><span class="src-sym">)&nbsp;)&nbsp;</span><span class="src-sym">{</span></div></li>
 <li><div class="src-line"><a name="a42"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id">RunTimeException</span><span class="src-sym">(</span><span class="src-str">&quot;Couldn't&nbsp;connect&nbsp;to&nbsp;the&nbsp;given&nbsp;database&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a43"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
 <li><div class="src-line"><a name="a44"></a>&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
@@ -238,7 +239,7 @@
 </div>
         <div class="credit">
 		    <hr />
-		    Documentation generated on Sat, 27 Mar 2010 16:27:33 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Mon, 05 Apr 2010 10:54:24 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

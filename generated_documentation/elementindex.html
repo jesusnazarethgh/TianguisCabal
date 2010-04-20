@@ -13,7 +13,7 @@
   <tr>
     <td class="header_menu">
         
-                                                          	    [ <a href="elementindex.html" class="menu">all elements</a> ]
+                                                                              	    [ <a href="elementindex.html" class="menu">all elements</a> ]
     </td>
   </tr>
   <tr><td class="header_line"><img src="media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
@@ -28,6 +28,7 @@
       <b>Packages:</b><br />
               <a href="li_Garson.html">Garson</a><br />
               <a href="li_TianguisCabal.html">TianguisCabal</a><br />
+              <a href="li_GarsonTests.html">GarsonTests</a><br />
             <br /><br />
                 </td>
     <td>
@@ -69,6 +70,10 @@
 				<dd>procedural page <a href="Garson/_application---models---Config.inc.php.html">Config.inc.php</a></dd>
 							<dt><b>Config</b></dt>
 				<dd>in file Config.inc.php, class <a href="Garson/Config.html">Config</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Provides a Config abstraction in the form of a singleton</dd>
+							<dt><b>ConfigTest</b></dt>
+				<dd>in file ConfigTest.php, class <a href="GarsonTests/ConfigTest.html">ConfigTest</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test Suite for <a href="Garson/Config.html">Config</a></dd>
+							<dt><b>ConfigTest.php</b></dt>
+				<dd>procedural page <a href="GarsonTests/_tests---ConfigTest.php.html">ConfigTest.php</a></dd>
 					</dl>
 	</div>
 	<a href="elementindex.html#top">top</a><br>
@@ -129,14 +134,16 @@
 				<dd>in file DbConnection.php, method <a href="Garson/DbConnection.html#methodgetAllRows">DbConnection::getAllRows()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Gets an Multidimensional associative array, with all the results:</dd>
 							<dt><b>getArrayPair</b></dt>
 				<dd>in file DbConnection.php, method <a href="Garson/DbConnection.html#methodgetArrayPair">DbConnection::getArrayPair()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Gets an array as a key =&gt; value pair:</dd>
-							<dt><b>getConfig</b></dt>
-				<dd>in file Config.inc.php, method <a href="Garson/Config.html#methodgetConfig">Config::getConfig()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get a single value from the config</dd>
 							<dt><b>getData</b></dt>
 				<dd>in file DataAccessObject.inc.php, method <a href="Garson/DataAccessObject.html#methodgetData">DataAccessObject::getData()</a></dd>
+							<dt><b>getFilename</b></dt>
+				<dd>in file Config.inc.php, method <a href="Garson/Config.html#methodgetFilename">Config::getFilename()</a></dd>
 							<dt><b>getId</b></dt>
 				<dd>in file DataAccessObject.inc.php, method <a href="Garson/DataAccessObject.html#methodgetId">DataAccessObject::getId()</a></dd>
 							<dt><b>getInstance</b></dt>
 				<dd>in file DbConnection.php, method <a href="Garson/DbConnection.html#methodgetInstance">DbConnection::getInstance()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get a single instance of the class (Singleton)</dd>
+							<dt><b>getInstance</b></dt>
+				<dd>in file Config.inc.php, method <a href="Garson/Config.html#methodgetInstance">Config::getInstance()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Loads the config from an ini file into an array</dd>
 							<dt><b>getLastId</b></dt>
 				<dd>in file DbConnection.php, method <a href="Garson/DbConnection.html#methodgetLastId">DbConnection::getLastId()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Used when you need to know the id of the row that you just inserted</dd>
 							<dt><b>getOneColumn</b></dt>
@@ -173,12 +180,8 @@
 		<dl>
 							<dt><b>$loaded</b></dt>
 				<dd>in file DataAccessObject.inc.php, variable <a href="Garson/DataAccessObject.html#var$loaded">DataAccessObject::$loaded</a></dd>
-							<dt><b>$loaded</b></dt>
-				<dd>in file Config.inc.php, variable <a href="Garson/Config.html#var$loaded">Config::$loaded</a></dd>
 							<dt><b>load</b></dt>
 				<dd>in file DataAccessObject.inc.php, method <a href="Garson/DataAccessObject.html#methodload">DataAccessObject::load()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Loads the data from the database, remember to load before do anything.</dd>
-							<dt><b>load</b></dt>
-				<dd>in file Config.inc.php, method <a href="Garson/Config.html#methodload">Config::load()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Loads the config from an ini file into an array</dd>
 					</dl>
 	</div>
 	<a href="elementindex.html#top">top</a><br>
@@ -191,8 +194,6 @@
 				<dd>in file Config.inc.php, method <a href="Garson/Config.html#methodsave">Config::save()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Saves the config from the array file into an inifile</dd>
 							<dt><b>save</b></dt>
 				<dd>in file DataAccessObject.inc.php, method <a href="Garson/DataAccessObject.html#methodsave">DataAccessObject::save()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Saves the data into the database, checking whether is a new row or an old</dd>
-							<dt><b>setConfig</b></dt>
-				<dd>in file Config.inc.php, method <a href="Garson/Config.html#methodsetConfig">Config::setConfig()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set a single config value</dd>
 							<dt><b>setData</b></dt>
 				<dd>in file DataAccessObject.inc.php, method <a href="Garson/DataAccessObject.html#methodsetData">DataAccessObject::setData()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Seter for the</dd>
 					</dl>
@@ -205,6 +206,14 @@
 		<dl>
 							<dt><b>$table_name</b></dt>
 				<dd>in file DataAccessObject.inc.php, variable <a href="Garson/DataAccessObject.html#var$table_name">DataAccessObject::$table_name</a></dd>
+							<dt><b>testDefaultFilename</b></dt>
+				<dd>in file ConfigTest.php, method <a href="GarsonTests/ConfigTest.html#methodtestDefaultFilename">ConfigTest::testDefaultFilename()</a></dd>
+							<dt><b>testRead</b></dt>
+				<dd>in file ConfigTest.php, method <a href="GarsonTests/ConfigTest.html#methodtestRead">ConfigTest::testRead()</a></dd>
+							<dt><b>testWriteAndSave</b></dt>
+				<dd>in file ConfigTest.php, method <a href="GarsonTests/ConfigTest.html#methodtestWriteAndSave">ConfigTest::testWriteAndSave()</a></dd>
+							<dt><b>TO_ROOT</b></dt>
+				<dd>in file ConfigTest.php, constant <a href="GarsonTests/_tests---ConfigTest.php.html#defineTO_ROOT">TO_ROOT</a></dd>
 					</dl>
 	</div>
 	<a href="elementindex.html#top">top</a><br>
@@ -213,20 +222,26 @@
 	<div>
 		<h2>_</h2>
 		<dl>
+							<dt><b>$_instances</b></dt>
+				<dd>in file Config.inc.php, variable <a href="Garson/Config.html#var$_instances">Config::$_instances</a></dd>
 							<dt><b>$__instance</b></dt>
 				<dd>in file DbConnection.php, variable <a href="Garson/DbConnection.html#var$__instance">DbConnection::$__instance</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Holds the instance of the singleton</dd>
 							<dt><b>__construct</b></dt>
-				<dd>in file DbConnection.php, method <a href="Garson/DbConnection.html#method__construct">DbConnection::__construct()</a></dd>
-							<dt><b>__construct</b></dt>
 				<dd>in file DataAccessObject.inc.php, method <a href="Garson/DataAccessObject.html#method__construct">DataAccessObject::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Creates DataAccessObject Instance</dd>
 							<dt><b>__construct</b></dt>
+				<dd>in file DbConnection.php, method <a href="Garson/DbConnection.html#method__construct">DbConnection::__construct()</a></dd>
+							<dt><b>__construct</b></dt>
 				<dd>in file Config.inc.php, method <a href="Garson/Config.html#method__construct">Config::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor is private so it can't be instantiated</dd>
+							<dt><b>__get</b></dt>
+				<dd>in file Config.inc.php, method <a href="Garson/Config.html#method__get">Config::__get()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get a single value from the config</dd>
+							<dt><b>__set</b></dt>
+				<dd>in file Config.inc.php, method <a href="Garson/Config.html#method__set">Config::__set()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set a single config value</dd>
 					</dl>
 	</div>
 	<a href="elementindex.html#top">top</a><br>
         <div class="credit">
 		    <hr />
-		    Documentation generated on Sat, 27 Mar 2010 16:27:32 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Mon, 05 Apr 2010 10:54:21 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>
