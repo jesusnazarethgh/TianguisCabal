@@ -12,6 +12,7 @@
   *
   * Provides extremely useful functions for data retrieval, and other database
   * affairs.
+  * @todo Change to use PDO-MySQL, Totally abstracted if posible
   * @package Garson
   */
 class DbConnection {
@@ -30,8 +31,13 @@ class DbConnection {
    * An array with all the errors
    * @var array
    */
-  protected $errors      = array();
+  protected $errors = array();
   
+  /**
+   * Protected constructor
+   * @todo Fix use of Config
+   * @return DbConnection
+   */
   protected function __construct()
   {
     require_once "application/models/Config.inc.php";
@@ -64,7 +70,7 @@ class DbConnection {
    * @param string $sql
    * @return array
    */
-  public function getAllRows($sql)
+  public function getAll($sql)
   {
     if ( !$results = @mysql_query($sql, $this->db_connection) ) {
       throw new RunTimeException("Couldn't execute query: ". mysql_error($this->db_connection) );
@@ -89,7 +95,7 @@ class DbConnection {
    * @param string $sql
    * @return unknown_type
    */
-  public function getOneColumn($sql)
+  public function getColumn($sql)
   {
     if ( !$results = @mysql_query($sql, $this->db_connection) ) {
       throw new RunTimeException("Couldn't execute query: ". mysql_error($this->db_connection) );
@@ -114,7 +120,7 @@ class DbConnection {
    * @param string $sql
    * @return array
    */
-  public function getArrayPair($sql)
+  public function getAssoc($sql)
   {
     if ( !$results = @mysql_query($sql, $this->db_connection) ) {
       throw new RunTimeException("Couldn't execute query: ". mysql_error($this->db_connection) );
@@ -140,7 +146,7 @@ class DbConnection {
    * @param string $sql
    * @return array
    */
-  public function getOneRow($sql)
+  public function getRow($sql)
   {
     if ( !$results = @mysql_query($sql, $this->db_connection) ) {
       throw new RunTimeException("Couldn't execute query: ". mysql_error($this->db_connection) );
@@ -157,7 +163,7 @@ class DbConnection {
    * @param string $sql
    * @return string
    */
-  public function getOneValue($sql)
+  public function getOne($sql)
   {
     if ( !$results = @mysql_query($sql, $this->db_connection) ) {
       throw new RunTimeException("Couldn't execute query: ". mysql_error($this->db_connection) );
@@ -174,7 +180,7 @@ class DbConnection {
    * @param string $sql
    * @return boolean
    */
-  public function executeQuery($sql)
+  public function execute($sql)
   {
     if ( !@mysql_query($sql, $this->db_connection) ) {
       throw new RunTimeException("Couldn't execute query: ". mysql_error($this->db_connection) );
