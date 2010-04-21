@@ -14,7 +14,7 @@
     <td class="header_menu">
         
                                                         
-                              		  [ <a href="../classtrees_Garson.html" class="menu">class tree: Garson</a> ]
+                                                  		  [ <a href="../classtrees_Garson.html" class="menu">class tree: Garson</a> ]
 		  [ <a href="../elementindex_Garson.html" class="menu">index: Garson</a> ]
 		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
     </td>
@@ -28,15 +28,19 @@
 	<div id="ric">
 					<p><a href="../ric_README.html">README</a></p>
 			</div>
+	<div id="todolist">
+			<p><a href="../todolist.html">Todo List</a></p>
+	</div>
       <b>Packages:</b><br />
               <a href="../li_TianguisCabal.html">TianguisCabal</a><br />
               <a href="../li_Garson.html">Garson</a><br />
+              <a href="../li_GarsonTests.html">GarsonTests</a><br />
             <br /><br />
                         <b>Files:</b><br />
       	  <div class="package">
 			<a href="../Garson/_application---models---Config.inc.php.html">		Config.inc.php
 		</a><br>
-			<a href="../Garson/_application---models---DataAccessObject.inc.php.html">		DataAccessObject.inc.php
+			<a href="../Garson/_application---models---DAO.inc.php.html">		DAO.inc.php
 		</a><br>
 			<a href="../Garson/_application---models---DbConnection.php.html">		DbConnection.php
 		</a><br>
@@ -46,7 +50,7 @@
             <b>Classes:</b><br />
         <div class="package">
 		    		<a href="../Garson/Config.html">Config</a><br />
-	    		<a href="../Garson/DataAccessObject.html">DataAccessObject</a><br />
+	    		<a href="../Garson/DAO.html">DAO</a><br />
 	    		<a href="../Garson/DbConnection.html">DbConnection</a><br />
 	  </div>
                 </td>
@@ -77,7 +81,7 @@ Source Location: /application/models/Config.inc.php<br /><br />
 <ul>
     <li><a href="../Garson/Config.html#var$config">$config</a></li>
     <li><a href="../Garson/Config.html#var$filename">$filename</a></li>
-    <li><a href="../Garson/Config.html#var$loaded">$loaded</a></li>
+    <li><a href="../Garson/Config.html#var$_instances">$_instances</a></li>
   </ul>
 </td>
 
@@ -86,10 +90,11 @@ Source Location: /application/models/Config.inc.php<br /><br />
 <h3><a href="#class_methods">Methods</a></h3>
 <ul>
     <li><a href="../Garson/Config.html#method__construct">__construct</a></li>
-    <li><a href="../Garson/Config.html#methodgetConfig">getConfig</a></li>
-    <li><a href="../Garson/Config.html#methodload">load</a></li>
+    <li><a href="../Garson/Config.html#methodgetFilename">getFilename</a></li>
+    <li><a href="../Garson/Config.html#methodgetInstance">getInstance</a></li>
     <li><a href="../Garson/Config.html#methodsave">save</a></li>
-    <li><a href="../Garson/Config.html#methodsetConfig">setConfig</a></li>
+    <li><a href="../Garson/Config.html#method__get">__get</a></li>
+    <li><a href="../Garson/Config.html#method__set">__set</a></li>
   </ul>
 </td>
 
@@ -117,10 +122,34 @@ Provides a Config abstraction in the form of a singleton<br /><br /></div><br />
 <a name="class_vars"></a>
 <h3>Class Variables</h3>
 <div class="tags">
+	<a name="var$_instances"></a>
+	<p></p>
+	<h4>static $_instances = <span class="value">array()</span></h4>
+	<p>[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a15">15</a>]</p>
+  <br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>mixed</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
 	<a name="var$config"></a>
 	<p></p>
-	<h4>static $config = <span class="value">array()</span></h4>
-	<p>[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a14">14</a>]</p>
+	<h4>$config = <span class="value">array()</span></h4>
+	<p>[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a16">16</a>]</p>
   <br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -143,32 +172,8 @@ Provides a Config abstraction in the form of a singleton<br /><br /></div><br />
 	<div class="top">[ <a href="#top">Top</a> ]</div><br />
 	<a name="var$filename"></a>
 	<p></p>
-	<h4>static $filename = <span class="value">&nbsp;&quot;&quot;</span></h4>
-	<p>[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a16">16</a>]</p>
-  <br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
-  </tr>
-</table>
-</div>
-
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>mixed</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$loaded"></a>
-	<p></p>
-	<h4>static $loaded = <span class="value">&nbsp;false</span></h4>
-	<p>[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a15">15</a>]</p>
+	<h4>$filename = <span class="value">&nbsp;''</span></h4>
+	<p>[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a17">17</a>]</p>
   <br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -196,48 +201,12 @@ Provides a Config abstraction in the form of a singleton<br /><br /></div><br />
 <h3>Class Methods</h3>
 <div class="tags">
   <hr />
-	<a name="methodgetConfig"></a>
-	<h3>static method getConfig <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a33">33</a>]</span></h3>
+	<a name="methodgetInstance"></a>
+	<h3>static method getInstance <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a39">39</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static string getConfig(
-string
-$field)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		Get a single value from the config<br /><br /><p>In the first call, it loads the config file</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">string&nbsp;&nbsp;</td>
-        <td><b>$field</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodload"></a>
-	<h3>static method load <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a59">59</a>]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static NULL load(
+		<code>static <a href="../Garson/Config.html">Config</a> getInstance(
 [string
 $filename = ''])</code>
     </td></tr></table>
@@ -267,13 +236,75 @@ $filename = ''])</code>
     </div><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
+
   <hr />
-	<a name="methodsave"></a>
-	<h3>static method save <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a76">76</a>]</span></h3>
+	<a name="method__construct"></a>
+	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a23">23</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static NULL save(
+		<code><a href="../Garson/Config.html">Config</a> __construct(
+
+$filename)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Constructor is private so it can't be instantiated<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$filename</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetFilename"></a>
+	<h3>method getFilename <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a101">101</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void getFilename(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsave"></a>
+	<h3>method save <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a57">57</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean save(
 [string
 $filename = ''])</code>
     </td></tr></table>
@@ -304,12 +335,48 @@ $filename = ''])</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
-	<a name="methodsetConfig"></a>
-	<h3>static method setConfig <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a47">47</a>]</span></h3>
+	<a name="method__get"></a>
+	<h3>method __get <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a87">87</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static unknown_type setConfig(
+		<code>string __get(
+string
+$field)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get a single value from the config<br /><br /><p>In the first call, it loads the config file</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$field</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__set"></a>
+	<h3>method __set <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a97">97</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void __set(
 $field
 $field, $value
 $value)</code>
@@ -345,38 +412,12 @@ $value)</code>
     </div><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
-
-  <hr />
-	<a name="method__construct"></a>
-	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a22">22</a>]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void __construct(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		Constructor is private so it can't be instantiated<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
 </div><br />
 
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Sat, 27 Mar 2010 16:27:32 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Tue, 20 Apr 2010 13:58:15 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

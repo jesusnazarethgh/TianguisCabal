@@ -1,8 +1,15 @@
 <?php
+/**
+ * @package GarsonTests
+ */
 define ('TO_ROOT', '..');
 require_once 'PHPUnit/Framework.php';
 require_once TO_ROOT . "/application/models/Config.inc.php";
 
+/**
+ * Test Suite for {@link Config}
+ * @author Argel Arias <levhita@gmail.com>
+ */
 class ConfigTest extends PHPUnit_Framework_TestCase
 {
     public function testRead()

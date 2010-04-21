@@ -1,6 +1,6 @@
 <?php
 /**
- * Holds the {@link DataAccessObject} model
+ * Holds the {@link DAO} model
  * @package Garson
  * @author Argel Arias <levhita@gmail.com>
  * @copyright Copyright (c) 2010, Argel Arias <levhita@gmail.com>
@@ -11,9 +11,10 @@ require_once TO_ROOT . "/application/model/DbConnection.inc.php";
 
 /**
  * Provides a database abstraction of a Row, simplyfing data access and modification
+ * @todo tests!!!
  * @package Garson
  */
-class DataAccessObject {
+class DAO {
   
   protected $table_name   = '';
   protected $id_field     = '';
@@ -71,17 +72,22 @@ class DataAccessObject {
   }
   
   /**
-   * Seter for the 
+   * Setter 
    * @param string $field
    * @param string $value
    * @return NULL
    */
-  public function setData($field, $value)
+  public function __set($field, $value)
   {
     $this->data[$field] = $value;  
   }
   
-  public function getData($field)
+  /**
+   * Getter
+   * @param string $field
+   * @return string
+   */
+  public function __get($field)
   {
     return $this->data[$field];
   }
@@ -174,6 +180,15 @@ class DataAccessObject {
   }
   
   /**
+   * Returns if the class instance is loaded
+   * @return boolean
+   */
+  public function isLoaded()
+  {
+    return $this->loaded;
+  }
+  
+  /**
    * Asserts that the DataAccessObject is Loaded
    * @return boolean
    */
@@ -183,15 +198,6 @@ class DataAccessObject {
       throw new RunTimeException($this->assert_message);
     }
     return true;
-  }
-  
-  /**
-   * Returns if the class instance is loaded
-   * @return boolean
-   */
-  public function isLoaded()
-  {
-    return $this->loaded;
   }
 }
 
