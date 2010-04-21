@@ -102,3 +102,5 @@ class Config {
     return $this->filename;
   }
 }
+
+/* vim: et ts=2: */

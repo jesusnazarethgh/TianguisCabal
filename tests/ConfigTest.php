@@ -54,3 +54,6 @@ class ConfigTest extends PHPUnit_Framework_TestCase
       $this->assertEquals($default_filename, $Config->getFilename());
     }
 }
+
+
+/* vim: et ts=2: */

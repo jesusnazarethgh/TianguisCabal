@@ -194,3 +194,5 @@ class DataAccessObject {
     return $this->loaded;
   }
 }
+
+/* vim: et ts=2: */

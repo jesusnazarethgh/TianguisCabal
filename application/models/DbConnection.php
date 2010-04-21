@@ -191,3 +191,5 @@ class DbConnection {
     return mysql_insert_id($this->db_connection);
   }
 }
+
+/* vim: et ts=2: */
