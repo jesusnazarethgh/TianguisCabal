@@ -26,38 +26,33 @@ set_include_path( implode( PATH_SEPARATOR, array(
  */
 function __autoload($class_name)
 {
-    // replace underscores for path delimiters
     $path = str_replace('_', '/', $class_name);
-    
-    // check for controllers
-    $path = ( stristr( $class_name, 'controller' ) ) ? 'controllers/' . $path : $path;
-    
-    // check for views
-    $path = ( stristr( $class_name, 'view' ) ) ? 'views/' . $path : $path;
-    
-    // check for models
-    $path = ( stristr( $class_name, 'model' ) ) ? ( 'models/' . substr( $path, 5, 5 ) ) : $path;
-    
-    // add the application path and the php extension
-    require_once APPLICATION_PATH . '/' . $path . '.php';
+    echo "require_once " . APPLICATION_PATH . " . '/' . $path . '.php';";
+    exit;
 }
+
+/*
+ * @todo set includepath
+ * ini_set('include_path', '');
+ */
+include_once APPLICATION_PATH . "/controllers/TestController.inc.php";
 
 /**
  * URL = TianguisCabal/test/test/1
- * url_rewrite= TianguisCabal/index.php&controller=test&action=test&value=1
+ * url_rewrite= TianguisCabal/index.php&controller=test&method=test&value=1
  * test => TestController
  * TEST => testAction
  */
 
 if( isset( $_GET['controller'] ) OR isset( $_GET['action'] ) ) {
-    $controller = "IndexController";
-    $action     = "indexAction";
-    $value      = '';
+    $controller = "controllers_IndexController";
+    $method     = "indexAction";
+    $value      = null;
 } else {
     $controller = ucwords( $_GET['controller'] ) . "Controller";
-    $action     = strtolower( $_GET['action'] ) . "Action";
+    $method     = strtolower( $_GET['action'] ) . "Action";
     $value      = ( isset( $_GET['value'] ) ) ? '' : $_GET['value'];
 }
 
 $Controller = new $controller();
-$Controller->$action( $value );
+$Controller->$method( $value );
