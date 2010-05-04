@@ -38,27 +38,34 @@
             <br /><br />
                         <b>Files:</b><br />
       	  <div class="package">
-			<a href="../Garson/_application---models---Config.inc.php.html">		Config.inc.php
+			<a href="../Garson/_application---Config.php.html">		Config.php
 		</a><br>
-			<a href="../Garson/_application---models---DAO.inc.php.html">		DAO.inc.php
+			<a href="../Garson/_application---DAO.php.html">		DAO.php
 		</a><br>
-			<a href="../Garson/_application---models---DbConnection.php.html">		DbConnection.php
+			<a href="../Garson/_application---DbConnection.php.html">		DbConnection.php
+		</a><br>
+			<a href="../Garson/_application---views---DetailView.php.html">		DetailView.php
+		</a><br>
+			<a href="../Garson/_application---views---ListView.php.html">		ListView.php
 		</a><br>
 	  </div><br />
       
       
             <b>Classes:</b><br />
         <div class="package">
-		    		<a href="../Garson/Config.html">Config</a><br />
+		    		<a href="../Garson/CategoryModel.html">CategoryModel</a><br />
+	    		<a href="../Garson/Config.html">Config</a><br />
 	    		<a href="../Garson/DAO.html">DAO</a><br />
 	    		<a href="../Garson/DbConnection.html">DbConnection</a><br />
+	    		<a href="../Garson/DetailView.html">DetailView</a><br />
+	    		<a href="../Garson/ListView.html">ListView</a><br />
 	  </div>
                 </td>
     <td>
       <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
 
 <h1>Class: Config</h1>
-Source Location: /application/models/Config.inc.php<br /><br />
+Source Location: /application/Config.php<br /><br />
 
 
 <table width="100%" border="0">
@@ -114,7 +121,7 @@ Source Location: /application/models/Config.inc.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a13">13</a>]<br />
+[line <a href="../__filesource/fsource_Garson__applicationConfig.php.html#a13">13</a>]<br />
 Provides a Config abstraction in the form of a singleton<br /><br /></div><br /><br />
 <div class="top">[ <a href="#top">Top</a> ]</div><br />
 
@@ -125,7 +132,7 @@ Provides a Config abstraction in the form of a singleton<br /><br /></div><br />
 	<a name="var$_instances"></a>
 	<p></p>
 	<h4>static $_instances = <span class="value">array()</span></h4>
-	<p>[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a15">15</a>]</p>
+	<p>[line <a href="../__filesource/fsource_Garson__applicationConfig.php.html#a15">15</a>]</p>
   <br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -149,7 +156,7 @@ Provides a Config abstraction in the form of a singleton<br /><br /></div><br />
 	<a name="var$config"></a>
 	<p></p>
 	<h4>$config = <span class="value">array()</span></h4>
-	<p>[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a16">16</a>]</p>
+	<p>[line <a href="../__filesource/fsource_Garson__applicationConfig.php.html#a16">16</a>]</p>
   <br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -173,7 +180,7 @@ Provides a Config abstraction in the form of a singleton<br /><br /></div><br />
 	<a name="var$filename"></a>
 	<p></p>
 	<h4>$filename = <span class="value">&nbsp;''</span></h4>
-	<p>[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a17">17</a>]</p>
+	<p>[line <a href="../__filesource/fsource_Garson__applicationConfig.php.html#a17">17</a>]</p>
   <br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -202,7 +209,7 @@ Provides a Config abstraction in the form of a singleton<br /><br /></div><br />
 <div class="tags">
   <hr />
 	<a name="methodgetInstance"></a>
-	<h3>static method getInstance <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a39">39</a>]</span></h3>
+	<h3>static method getInstance <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationConfig.php.html#a39">39</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -239,7 +246,7 @@ $filename = ''])</code>
 
   <hr />
 	<a name="method__construct"></a>
-	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a23">23</a>]</span></h3>
+	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationConfig.php.html#a23">23</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -275,7 +282,7 @@ $filename)</code>
   </div>
   <hr />
 	<a name="methodgetFilename"></a>
-	<h3>method getFilename <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a101">101</a>]</span></h3>
+	<h3>method getFilename <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationConfig.php.html#a101">101</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -300,7 +307,7 @@ $filename)</code>
   </div>
   <hr />
 	<a name="methodsave"></a>
-	<h3>method save <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a57">57</a>]</span></h3>
+	<h3>method save <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationConfig.php.html#a57">57</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -336,7 +343,7 @@ $filename = ''])</code>
   </div>
   <hr />
 	<a name="method__get"></a>
-	<h3>method __get <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a87">87</a>]</span></h3>
+	<h3>method __get <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationConfig.php.html#a87">87</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -372,7 +379,7 @@ $field)</code>
   </div>
   <hr />
 	<a name="method__set"></a>
-	<h3>method __set <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationmodelsConfig.inc.php.html#a97">97</a>]</span></h3>
+	<h3>method __set <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationConfig.php.html#a97">97</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -417,7 +424,7 @@ $value)</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Tue, 20 Apr 2010 13:58:15 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Mon, 03 May 2010 23:57:07 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>
