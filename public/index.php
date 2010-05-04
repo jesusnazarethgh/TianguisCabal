@@ -36,7 +36,7 @@ function __autoload($class_name)
     $path = ( stristr( $class_name, 'view' ) ) ? 'views/' . $path : $path;
     
     // check for models
-    $path = ( stristr( $class_name, 'model' ) ) ? ( 'models/' . substr( $path, 5, 5 ) ) : $path;
+    $path = ( stristr( $class_name, 'model' ) ) ? 'models/' . $path : $path;
     
     // add the application path and the php extension
     require_once APPLICATION_PATH . '/' . $path . '.php';
@@ -49,7 +49,7 @@ function __autoload($class_name)
  * TEST => testAction
  */
 
-if( isset( $_GET['controller'] ) OR isset( $_GET['action'] ) ) {
+if( !isset( $_GET['controller'] ) OR !isset( $_GET['action'] ) ) {
     $controller = "IndexController";
     $action     = "indexAction";
     $value      = '';
