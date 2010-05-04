@@ -1,0 +1,16 @@
+#Basic Rewrite Rules, taken From Zend Framework
+#http://framework.zend.com/wiki/display/ZFDEV/Configuring%2BYour%2BURL%2BRewriter
+RewriteEngine on
+
+#In your local config you might need to reconfig this, by example lets say that
+#your local copy is in: http://localhost/repositories/tiaguiscabal/
+#then your rewrite base would be: /repositories/tianguiscabal/
+RewriteBase /
+
+#These rules exclude real files and directories from the rewriting and lets them
+#pass through unaffected:(uncomment IF NEEDED).
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+
+#Extend this list as you need more files to be directly accesible trought Apache
+RewriteRule !\.(js|ico|txt|gif|jpg|png|css|svg|xml)$ index.php
