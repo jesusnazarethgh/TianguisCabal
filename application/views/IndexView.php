@@ -1,17 +1,14 @@
 <?php
-
-class IndexView {
-  /**
-   * @var Array
-   */
-  protected $variables = array();
+/**
+ * @package TianguisCabal
+ */
+/**
+ * Extends [@link View} as the Index View
+ */
+class IndexView extends View{
   
-  public function assign( $field, $value ) {
-    $this->variables[ $field ] = $value;
-  }
-  
-  public function display() {
-    $Vars = (object) $this->variables;
-    include APPLICATION_PATH . "/layouts/index.phtml";
+  public function __construct()
+  {
+    $this->setTemplate('index');  
   }
 }

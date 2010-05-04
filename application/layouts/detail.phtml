@@ -1,0 +1,16 @@
+<?php include APPLICATION_PATH ."/layouts/header.phtml" ?>
+            
+<?php if ( isset($Vars->Model) ) {?>
+<ul>  
+  <?php 
+  $data = $Vars->Model->getAllData();
+  foreach ($data as $field => $value) {
+    echo "<li><strong>". htmlspecialchars($field).":</strong> " .htmlspecialchars($value) ."</li>\n";
+  }
+  ?>
+</ul>
+<?php } else { ?>
+  <p>No hay ningún item para mostrar</p>
+<?php } ?>
+
+<?php include APPLICATION_PATH ."/layouts/footer.phtml" ?>

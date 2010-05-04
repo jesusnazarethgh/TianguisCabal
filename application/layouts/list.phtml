@@ -1,0 +1,29 @@
+<?php include APPLICATION_PATH ."/layouts/header.phtml" ?>
+            
+<?php if ( count($Vars->rows) ) {?>
+  <table>
+  <?php 
+    //Creates the table header using the keys of the first row
+    $fields = array_keys( $Vars->rows[0] );
+    echo "<tr>";
+    foreach ($fields as $field) {
+      echo "<th>". htmlspecialchars($field). "</th>";
+    }
+    echo "</tr>\n";
+    
+    //Fills each row
+    foreach ($Vars->rows AS $row) {
+      echo "<tr>";
+      foreach ($row AS $value) {
+        echo "<td>". htmlspecialchars($value). "</td>";
+      }
+      echo "</tr>\n";
+    }
+  ?>
+  </table>
+
+<?php } else { ?>
+  <p>No hay ningún item para mostrar</p>
+<?php } ?>
+
+<?php include APPLICATION_PATH ."/layouts/footer.phtml" ?>
