@@ -1,25 +1,19 @@
 <?php
-
-#doc
-#  classname:  IndexController
-#  scope:    PUBLIC
-#
-#/doc
+/**
+ * Main Controller, the one that gets shown when you don't send any parameter
+ * @package TianguisCabal 
+ */
 class IndexController
 {
-    protected $view, $value;
-    
-    public function __constructor( $value ) {
-        $this->value = $value;
-    }
 
-    public function indexAction()
+  public function indexAction()
     { 
-        $Data = new Model_Test( $this->value );
+        $Category = new CategoryModel(2);
+        $Category->load();
         
-        $this->view = new IndexView();
-
-        $this->view->assign( 'Value', $Data->getValue() );
-        $this->view->display();
+        $View = new DetailView();
+        $View->setModel($Category);
+        
+        $View->display();
     } 
 }
