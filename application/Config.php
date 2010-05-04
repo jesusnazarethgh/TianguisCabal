@@ -25,7 +25,7 @@ class Config {
     if ( !file_exists($this->_filename) ) {
       throw new RuntimeException("Couldn't load configuration file: " . $this->_filename);
     }
-    $this->config = parse_ini_file($this->_filename);
+    $this->_config = parse_ini_file($this->_filename);
   }
   
   /**

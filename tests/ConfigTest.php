@@ -2,9 +2,9 @@
 /**
  * @package GarsonTests
  */
-define ('TO_ROOT', '..');
+define ('APPLICATION_PATH', '../application');
 require_once 'PHPUnit/Framework.php';
-require_once TO_ROOT . "/application/models/Config.inc.php";
+require_once APPLICATION_PATH. "/Config.php";
 
 /**
  * Test Suite for {@link Config}
@@ -50,7 +50,7 @@ class ConfigTest extends PHPUnit_Framework_TestCase
     
     public function testDefaultFilename()
     {
-      $default_filename = TO_ROOT . "/application/config.ini";
+      $default_filename = APPLICATION_PATH . "/config.ini";
       
       $this->assertFileExists($default_filename,
       'You must have an application config.ini to run this test');
