@@ -1,7 +1,11 @@
 <?php
 /**
- * {@link View} Class from this class, custom classes are made
- * @author Argel Arias <levhita@gmail.com>
+ * @package Garson
+ * @author Argel Arias <levhita@gmail.com> 
+ */ 
+
+/**
+ * {@link View} Class, all custom classes are made from this one
  */
 class View {
   /**

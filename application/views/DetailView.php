@@ -1,11 +1,11 @@
 <?php
 /**
  * @package Garson
+ * @author Argel Arias <levhita@gmail.com>
  */
 
 /**
  * Extends {@link View} to create Detail View
- * @author Argel Arias <levhita@gmail.com>
  */
 class DetailView extends View
 {

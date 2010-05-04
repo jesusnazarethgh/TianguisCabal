@@ -48,13 +48,13 @@
 <ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
 <li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
 <li><div class="src-line"><a name="a3"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;Garson</span></div></li>
-<li><div class="src-line"><a name="a4"></a><span class="src-doc">&nbsp;*/</span></div></li>
-<li><div class="src-line"><a name="a5"></a>&nbsp;</div></li>
-<li><div class="src-line"><a name="a6"></a><span class="src-doc">/**</span></div></li>
-<li><div class="src-line"><a name="a7"></a><span class="src-doc">&nbsp;*&nbsp;Extends&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;View}</span><span class="src-doc">&nbsp;to&nbsp;create&nbsp;list&nbsp;of&nbsp;items</span></div></li>
-<li><div class="src-line"><a name="a8"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;Argel&nbsp;Arias&nbsp;&lt;levhita@gmail.com&gt;</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;Argel&nbsp;Arias&nbsp;&lt;levhita@gmail.com&gt;</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a6"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">&nbsp;*&nbsp;Extends&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;View}</span><span class="src-doc">&nbsp;to&nbsp;create&nbsp;list&nbsp;of&nbsp;items</span></div></li>
 <li><div class="src-line"><a name="a9"></a><span class="src-doc">&nbsp;*/</span></div></li>
-<li><div class="src-line"><a name="a10"></a><span class="src-key">class&nbsp;</span><a href="../Garson/ListView.html">ListView</a>&nbsp;<span class="src-key">extends&nbsp;</span><a href="../TianguisCabal/View.html">View</a></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-key">class&nbsp;</span><a href="../Garson/ListView.html">ListView</a>&nbsp;<span class="src-key">extends&nbsp;</span><a href="../Garson/View.html">View</a></div></li>
 <li><div class="src-line"><a name="a11"></a><span class="src-sym">{</span></div></li>
 <li><div class="src-line"><a name="a12"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
 <li><div class="src-line"><a name="a13"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;Rows&nbsp;to&nbsp;be&nbsp;shown&nbsp;in&nbsp;the&nbsp;template</span></div></li>
@@ -69,7 +69,7 @@
 <li><div class="src-line"><a name="a22"></a>&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../Garson/ListView.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-var">$templateName</span>=<span class="src-str">''</span><span class="src-sym">)</span></div></li>
 <li><div class="src-line"><a name="a23"></a>&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
 <li><div class="src-line"><a name="a24"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$templateName&nbsp;</span>=&nbsp;<span class="src-sym">(&nbsp;</span><span class="src-key">empty</span><span class="src-sym">(</span><span class="src-var">$templateName</span><span class="src-sym">)&nbsp;)</span>?<span class="src-str">'list'</span>:<span class="src-var">$templateName</span><span class="src-sym">;&nbsp;</span></div></li>
-<li><div class="src-line"><a name="a25"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">parent</span><span class="src-sym">::</span><a href="../TianguisCabal/View.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-var">$templateName</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a25"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">parent</span><span class="src-sym">::</span><a href="../Garson/View.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-var">$templateName</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a26"></a>&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
 <li><div class="src-line"><a name="a27"></a>&nbsp;&nbsp;</div></li>
 <li><div class="src-line"><a name="a28"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
@@ -87,15 +87,15 @@
 <li><div class="src-line"><a name="a40"></a>&nbsp;&nbsp;</div></li>
 <li><div class="src-line"><a name="a41"></a>&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../Garson/ListView.html#methoddisplay">display</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
 <li><div class="src-line"><a name="a42"></a>&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
-<li><div class="src-line"><a name="a43"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../TianguisCabal/View.html#methodassign">assign</a><span class="src-sym">(</span><span class="src-str">'rows'</span><span class="src-sym">,&nbsp;</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Garson/ListView.html#var$_rows">_rows</a><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
-<li><div class="src-line"><a name="a44"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">parent</span><span class="src-sym">::</span><a href="../TianguisCabal/View.html#methoddisplay">display</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a43"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Garson/View.html#methodassign">assign</a><span class="src-sym">(</span><span class="src-str">'rows'</span><span class="src-sym">,&nbsp;</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Garson/ListView.html#var$_rows">_rows</a><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a44"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">parent</span><span class="src-sym">::</span><a href="../Garson/View.html#methoddisplay">display</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a45"></a>&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
 <li><div class="src-line"><a name="a46"></a><span class="src-sym">}</span></div></li>
 </ol>
 </div>
         <div class="credit">
 		    <hr />
-		    Documentation generated on Mon, 03 May 2010 23:57:10 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Tue, 04 May 2010 00:26:15 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

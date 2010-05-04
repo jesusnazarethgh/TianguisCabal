@@ -1,11 +1,11 @@
 <?php
 /**
  * @package Garson
+ * @author Argel Arias <levhita@gmail.com>
  */
 
 /**
  * Extends {@link View} to create list of items
- * @author Argel Arias <levhita@gmail.com>
  */
 class ListView extends View
 {

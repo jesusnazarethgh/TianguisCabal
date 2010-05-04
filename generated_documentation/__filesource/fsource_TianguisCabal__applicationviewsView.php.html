@@ -47,73 +47,74 @@
 <div class="src-code">
 <ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
 <li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
-<li><div class="src-line"><a name="a3"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;View}</span><span class="src-doc">&nbsp;Class&nbsp;from&nbsp;this&nbsp;class,&nbsp;custom&nbsp;classes&nbsp;are&nbsp;made</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;View}</span><span class="src-doc">&nbsp;Class,&nbsp;all&nbsp;custom&nbsp;classes&nbsp;are&nbsp;made&nbsp;from&nbsp;this&nbsp;one</span></div></li>
 <li><div class="src-line"><a name="a4"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;Argel&nbsp;Arias&nbsp;&lt;levhita@gmail.com&gt;</span></div></li>
-<li><div class="src-line"><a name="a5"></a><span class="src-doc">&nbsp;*/</span></div></li>
-<li><div class="src-line"><a name="a6"></a><span class="src-key">class&nbsp;</span><a href="../TianguisCabal/View.html">View</a>&nbsp;<span class="src-sym">{</span></div></li>
-<li><div class="src-line"><a name="a7"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
-<li><div class="src-line"><a name="a8"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;Holds&nbsp;variables&nbsp;to&nbsp;be&nbsp;passed&nbsp;to&nbsp;the&nbsp;templates</span></div></li>
-<li><div class="src-line"><a name="a9"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc-type">Array&nbsp;</span></div></li>
-<li><div class="src-line"><a name="a10"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*/</span></div></li>
-<li><div class="src-line"><a name="a11"></a>&nbsp;&nbsp;<span class="src-key">protected&nbsp;</span><a href="../TianguisCabal/View.html#var$_variables">$_variables</a>&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
-<li><div class="src-line"><a name="a12"></a>&nbsp;&nbsp;</div></li>
-<li><div class="src-line"><a name="a13"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
-<li><div class="src-line"><a name="a14"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;Fullpath&nbsp;of&nbsp;the&nbsp;template&nbsp;to&nbsp;be&nbsp;shown.</span></div></li>
-<li><div class="src-line"><a name="a15"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc-type">string&nbsp;</span></div></li>
-<li><div class="src-line"><a name="a16"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*/</span></div></li>
-<li><div class="src-line"><a name="a17"></a>&nbsp;&nbsp;<span class="src-key">protected&nbsp;</span><a href="../TianguisCabal/View.html#var$_template">$_template</a>&nbsp;=&nbsp;<span class="src-str">''</span><span class="src-sym">;</span></div></li>
-<li><div class="src-line"><a name="a18"></a>&nbsp;&nbsp;</div></li>
-<li><div class="src-line"><a name="a19"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
-<li><div class="src-line"><a name="a20"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;Constructor&nbsp;for&nbsp;class&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;View}</span></div></li>
-<li><div class="src-line"><a name="a21"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$template_name&nbsp;</span></div></li>
-<li><div class="src-line"><a name="a22"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">View&nbsp;</span></div></li>
-<li><div class="src-line"><a name="a23"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*/</span></div></li>
-<li><div class="src-line"><a name="a24"></a>&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../TianguisCabal/View.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-var">$templateName</span><span class="src-sym">)</span></div></li>
-<li><div class="src-line"><a name="a25"></a>&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
-<li><div class="src-line"><a name="a26"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../TianguisCabal/View.html#methodsetTemplate">setTemplate</a><span class="src-sym">(</span><span class="src-var">$templateName</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
-<li><div class="src-line"><a name="a27"></a>&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
-<li><div class="src-line"><a name="a28"></a>&nbsp;&nbsp;</div></li>
-<li><div class="src-line"><a name="a29"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
-<li><div class="src-line"><a name="a30"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;Sets&nbsp;the&nbsp;template&nbsp;to&nbsp;be&nbsp;shown</span></div></li>
-<li><div class="src-line"><a name="a31"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$template_name&nbsp;</span><span class="src-doc">the&nbsp;template&nbsp;name,&nbsp;it'll&nbsp;be&nbsp;completed&nbsp;with&nbsp;a</span></div></li>
-<li><div class="src-line"><a name="a32"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;path&nbsp;and&nbsp;extension.</span></div></li>
-<li><div class="src-line"><a name="a33"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@throws</span><span class="src-doc">&nbsp;InvalidArgumentException</span></div></li>
-<li><div class="src-line"><a name="a34"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">null&nbsp;</span></div></li>
-<li><div class="src-line"><a name="a35"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*/</span></div></li>
-<li><div class="src-line"><a name="a36"></a>&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../TianguisCabal/View.html#methodsetTemplate">setTemplate</a><span class="src-sym">(</span><span class="src-var">$templateName</span><span class="src-sym">)</span></div></li>
-<li><div class="src-line"><a name="a37"></a>&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
-<li><div class="src-line"><a name="a38"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
-<li><div class="src-line"><a name="a39"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$template&nbsp;</span>=&nbsp;<span class="src-id"><a href="../TianguisCabal/_public---index.php.html#defineAPPLICATION_PATH">APPLICATION_PATH</a>&nbsp;</span>.&nbsp;<span class="src-str">&quot;</span><span class="src-str">/layouts/<span class="src-var">$templateName</span>.phtml</span><span class="src-str">&quot;</span><span class="src-sym">;</span></div></li>
-<li><div class="src-line"><a name="a40"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span><span class="src-sym">!</span><a href="http://www.php.net/file_exists">file_exists</a><span class="src-sym">(</span><span class="src-var">$template</span><span class="src-sym">)&nbsp;)&nbsp;</span><span class="src-sym">{</span></div></li>
-<li><div class="src-line"><a name="a41"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id">InvalidArgumentException</span><span class="src-sym">(</span><span class="src-str">&quot;</span><span class="src-str">Couldn't&nbsp;find&nbsp;template&nbsp;'<span class="src-var">$template</span>'</span><span class="src-str">&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
-<li><div class="src-line"><a name="a42"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
-<li><div class="src-line"><a name="a43"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../TianguisCabal/View.html#var$_template">_template</a>&nbsp;=&nbsp;<span class="src-var">$template</span><span class="src-sym">;</span></div></li>
-<li><div class="src-line"><a name="a44"></a>&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
-<li><div class="src-line"><a name="a45"></a>&nbsp;&nbsp;</div></li>
-<li><div class="src-line"><a name="a46"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
-<li><div class="src-line"><a name="a47"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;Assigns&nbsp;a&nbsp;variable&nbsp;to&nbsp;be&nbsp;visible&nbsp;in&nbsp;the&nbsp;Template</span></div></li>
-<li><div class="src-line"><a name="a48"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$field&nbsp;</span></div></li>
-<li><div class="src-line"><a name="a49"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">var&nbsp;</span><span class="src-doc-var">$value&nbsp;</span></div></li>
-<li><div class="src-line"><a name="a50"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">null&nbsp;</span></div></li>
-<li><div class="src-line"><a name="a51"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*/</span></div></li>
-<li><div class="src-line"><a name="a52"></a>&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../TianguisCabal/View.html#methodassign">assign</a><span class="src-sym">(&nbsp;</span><span class="src-var">$field</span><span class="src-sym">,&nbsp;</span><span class="src-var">$value&nbsp;</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
-<li><div class="src-line"><a name="a53"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../TianguisCabal/View.html#var$_variables">_variables</a><span class="src-sym">[&nbsp;</span><span class="src-var">$field&nbsp;</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-var">$value</span><span class="src-sym">;</span></div></li>
-<li><div class="src-line"><a name="a54"></a>&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
-<li><div class="src-line"><a name="a55"></a>&nbsp;&nbsp;</div></li>
-<li><div class="src-line"><a name="a56"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
-<li><div class="src-line"><a name="a57"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;Displays&nbsp;the&nbsp;Template</span></div></li>
-<li><div class="src-line"><a name="a58"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">null&nbsp;</span></div></li>
-<li><div class="src-line"><a name="a59"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*/</span></div></li>
-<li><div class="src-line"><a name="a60"></a>&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../TianguisCabal/View.html#methoddisplay">display</a><span class="src-sym">(</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
-<li><div class="src-line"><a name="a61"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$Vars&nbsp;</span>=&nbsp;(object)&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../TianguisCabal/View.html#var$_variables">_variables</a><span class="src-sym">;</span></div></li>
-<li><div class="src-line"><a name="a62"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-inc">include&nbsp;</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../TianguisCabal/View.html#var$_template">_template</a><span class="src-sym">;</span></div></li>
-<li><div class="src-line"><a name="a63"></a>&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
-<li><div class="src-line"><a name="a64"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;TianguisCabal</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-key">class&nbsp;</span><a href="../TianguisCabal/View.html">View</a>&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a8"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;Holds&nbsp;variables&nbsp;to&nbsp;be&nbsp;passed&nbsp;to&nbsp;the&nbsp;templates</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc-type">Array&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a12"></a>&nbsp;&nbsp;<span class="src-key">protected&nbsp;</span><a href="../TianguisCabal/View.html#var$_variables">$_variables</a>&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a13"></a>&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a14"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;Fullpath&nbsp;of&nbsp;the&nbsp;template&nbsp;to&nbsp;be&nbsp;shown.</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc-type">string&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a18"></a>&nbsp;&nbsp;<span class="src-key">protected&nbsp;</span><a href="../TianguisCabal/View.html#var$_template">$_template</a>&nbsp;=&nbsp;<span class="src-str">''</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a19"></a>&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a20"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;Constructor&nbsp;for&nbsp;class&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;View}</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$template_name&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">View&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a25"></a>&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../TianguisCabal/View.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-var">$templateName</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a26"></a>&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a27"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../TianguisCabal/View.html#methodsetTemplate">setTemplate</a><span class="src-sym">(</span><span class="src-var">$templateName</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a28"></a>&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a29"></a>&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a30"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a31"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;Sets&nbsp;the&nbsp;template&nbsp;to&nbsp;be&nbsp;shown</span></div></li>
+<li><div class="src-line"><a name="a32"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$template_name&nbsp;</span><span class="src-doc">the&nbsp;template&nbsp;name,&nbsp;it'll&nbsp;be&nbsp;completed&nbsp;with&nbsp;a</span></div></li>
+<li><div class="src-line"><a name="a33"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;path&nbsp;and&nbsp;extension.</span></div></li>
+<li><div class="src-line"><a name="a34"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@throws</span><span class="src-doc">&nbsp;InvalidArgumentException</span></div></li>
+<li><div class="src-line"><a name="a35"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">null&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a36"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a37"></a>&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../TianguisCabal/View.html#methodsetTemplate">setTemplate</a><span class="src-sym">(</span><span class="src-var">$templateName</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a38"></a>&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a39"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a40"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$template&nbsp;</span>=&nbsp;<span class="src-id"><a href="../TianguisCabal/_public---index.php.html#defineAPPLICATION_PATH">APPLICATION_PATH</a>&nbsp;</span>.&nbsp;<span class="src-str">&quot;</span><span class="src-str">/layouts/<span class="src-var">$templateName</span>.phtml</span><span class="src-str">&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a41"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span><span class="src-sym">!</span><a href="http://www.php.net/file_exists">file_exists</a><span class="src-sym">(</span><span class="src-var">$template</span><span class="src-sym">)&nbsp;)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a42"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id">InvalidArgumentException</span><span class="src-sym">(</span><span class="src-str">&quot;</span><span class="src-str">Couldn't&nbsp;find&nbsp;template&nbsp;'<span class="src-var">$template</span>'</span><span class="src-str">&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a43"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a44"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../TianguisCabal/View.html#var$_template">_template</a>&nbsp;=&nbsp;<span class="src-var">$template</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a45"></a>&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a46"></a>&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a47"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a48"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;Assigns&nbsp;a&nbsp;variable&nbsp;to&nbsp;be&nbsp;visible&nbsp;in&nbsp;the&nbsp;Template</span></div></li>
+<li><div class="src-line"><a name="a49"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$field&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a50"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">var&nbsp;</span><span class="src-doc-var">$value&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a51"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">null&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a52"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a53"></a>&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../TianguisCabal/View.html#methodassign">assign</a><span class="src-sym">(&nbsp;</span><span class="src-var">$field</span><span class="src-sym">,&nbsp;</span><span class="src-var">$value&nbsp;</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a54"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../TianguisCabal/View.html#var$_variables">_variables</a><span class="src-sym">[&nbsp;</span><span class="src-var">$field&nbsp;</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-var">$value</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a55"></a>&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a56"></a>&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a57"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a58"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;Displays&nbsp;the&nbsp;Template</span></div></li>
+<li><div class="src-line"><a name="a59"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">null&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a60"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a61"></a>&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../TianguisCabal/View.html#methoddisplay">display</a><span class="src-sym">(</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a62"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$Vars&nbsp;</span>=&nbsp;(object)&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../TianguisCabal/View.html#var$_variables">_variables</a><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a63"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-inc">include&nbsp;</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../TianguisCabal/View.html#var$_template">_template</a><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a64"></a>&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a65"></a><span class="src-sym">}</span></div></li>
 </ol>
 </div>
         <div class="credit">
 		    <hr />
-		    Documentation generated on Mon, 03 May 2010 23:57:10 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Tue, 04 May 2010 00:24:34 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>
