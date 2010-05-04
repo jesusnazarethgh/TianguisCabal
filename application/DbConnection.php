@@ -35,7 +35,6 @@ class DbConnection {
   
   /**
    * Protected constructor
-   * @todo Fix use of Config
    * @return DbConnection
    */
   protected function __construct()
