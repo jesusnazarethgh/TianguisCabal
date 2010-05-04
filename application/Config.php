@@ -13,19 +13,19 @@
 class Config {
 
   protected static $_instances = array();
-  protected $config = array();
-  protected $filename = '';
+  protected $_config = array();
+  protected $_filename = '';
     
   /**
    * Constructor is private so it can't be instantiated
    * @return Config
    */
   protected function __construct($filename){
-    $this->filename = $filename;
-    if ( !file_exists($this->filename) ) {
-      throw new RuntimeException("Couldn't load configuration file: " . $this->filename);
+    $this->_filename = $filename;
+    if ( !file_exists($this->_filename) ) {
+      throw new RuntimeException("Couldn't load configuration file: " . $this->_filename);
     }
-    $this->config = parse_ini_file($this->filename);
+    $this->config = parse_ini_file($this->_filename);
   }
   
   /**
@@ -56,23 +56,23 @@ class Config {
    */
   public function save($filename = '')
   {
-    $this->filename = (empty($filename)) ? APPLICATION_PATH . "/aconfig.ini" : $filename;
-    if ( !file_exists($this->filename) ) {
-      throw new RuntimeException("Configuration file doesn't exist: " . $this->filename);
+    $this->_filename = (empty($filename)) ? $this->_filename : $filename;
+    if ( !file_exists($this->_filename) ) {
+      throw new RuntimeException("Configuration file doesn't exist: " . $this->_filename);
     }
     
-    $config_string = '';
-    foreach ($this->config AS $field => $value) {
+    $configString = '';
+    foreach ($this->_config AS $field => $value) {
       /**
        * @todo There are some characters that are forbidden as keys
        * and values, they must raise an exception
        * source: http://php.net/manual/en/function.parse-ini-file.php
        */
-      $config_string .= "$field=\"$value\"\n";
+      $configString .= "$field=\"$value\"\n";
     }
     
-    if ( file_put_contents($this->filename, $config_string)==false) {
-      throw new RunTimeException("Couldn't save configuration file: ". $this->filename);
+    if ( file_put_contents($this->_filename, $configString)==false) {
+      throw new RunTimeException("Couldn't save configuration file: ". $this->_filename);
     }
     return true;
   }
@@ -85,7 +85,7 @@ class Config {
    * @return string
    */
   public function __get($field) {
-    return $this->config[$field];
+    return $this->_config[$field];
   }
   
   /**
@@ -95,10 +95,10 @@ class Config {
    * @return void
    */
   public function __set($field, $value) {
-    $this->config[$field] = $value;
+    $this->_config[$field] = $value;
   }
   
   public function getFilename(){
-    return $this->filename;
+    return $this->_filename;
   }
 }
