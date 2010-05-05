@@ -40,7 +40,7 @@ class Config {
    */
   public static function getInstance($filename = '')
   {
-    $filename = ( empty( $filename ) ) ? APPLICATION_PATH . "/Config.ini" : $filename;
+    $filename = ( empty( $filename ) ) ? APPLICATION_PATH . "/config.ini" : $filename;
     
     if ( ! ( self::$_instances[$filename] instanceof self ) ) {
       self::$_instances[ $filename ] = new self( $filename );
