@@ -3,7 +3,7 @@
  * Category Controller
  * @package TianguisCabal 
  */
-class CategoryController extends controller
+class CategoryController extends Controller
 {
 
   public function detailAction()
@@ -25,7 +25,7 @@ class CategoryController extends controller
     $categories = $DbConnection->getAll($sql);
     $View = new ListView();
     $View->setRows($categories);
-        
+
     $View->display();
   } 
 }
