@@ -55,9 +55,10 @@ class DbConnection {
    * @return DbConnection
    */
   public static function getInstance() {
-    if (!self::$__instance instanceof self) {
+    if ( !self::$__instance instanceof self ) {
       self::$__instance = new self;
     }
+    
     return self::$__instance;
   }
   
