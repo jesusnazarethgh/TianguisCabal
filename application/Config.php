@@ -20,13 +20,15 @@ class Config {
    * Constructor is private so it can't be instantiated
    * @return Config
    */
-  protected function __construct($filename){
-    $this->_filename = $filename;
-    if ( !file_exists($this->_filename) ) {
-      throw new RuntimeException("Couldn't load configuration file: " . $this->_filename);
+    protected function __construct( $filename ) {
+        $this->_filename = $filename;
+        
+        if ( !file_exists( $this->_filename ) ) {
+          throw new RuntimeException("Couldn't load configuration file: " . $this->_filename);
+        }
+        
+        $this->_config = parse_ini_file($this->_filename);
     }
-    $this->_config = parse_ini_file($this->_filename);
-  }
   
   /**
    * Loads the config from an ini file into an array
@@ -38,12 +40,12 @@ class Config {
    */
   public static function getInstance($filename = '')
   {
-    $filename = (empty($filename))? APPLICATION_PATH . "/config.ini" : $filename;
+    $filename = ( empty( $filename ) ) ? APPLICATION_PATH . "/Config.ini" : $filename;
     
-    if ( !(self::$_instances[$filename] instanceof self)) {
-      self::$_instances[$filename] = new self($filename);
+    if ( ! ( self::$_instances[$filename] instanceof self ) ) {
+      self::$_instances[ $filename ] = new self( $filename );
     }
-    return self::$_instances[$filename];
+    return self::$_instances[ $filename ];
   }
   
   /**
